@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './Components/Product/Product.component';
 import { CounterComponent } from './Components/Product/counter/counter.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,8 @@ import { CounterComponent } from './Components/Product/counter/counter.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
