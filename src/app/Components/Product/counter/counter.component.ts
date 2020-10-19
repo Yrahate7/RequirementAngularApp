@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -9,15 +9,25 @@ export class CounterComponent {
 
   constructor() { }
 
+  @Input()
+  public upperLimit: number;
+
+
+  @Input()
+  public lowerLimit: number;
+
   public count = 0;
 
   public increment(): void {
-
-    this.count++;
+    if (this.count < this.upperLimit) {
+      this.count++;
+    }
   }
 
   public decrement(): void {
-    this.count--;
+    if (this.count > this.lowerLimit) {
+      this.count--;
+    }
   }
 
 }

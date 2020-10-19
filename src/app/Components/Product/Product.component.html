@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-header">
+        {{product.image}}
+    </div>
+
+    <div class="card-body">
+
+        <div class="card-title">
+            {{product.name}}
+        </div>
+
+        <div class="card-text d-flex justify-content-center"> {{product.price}} </div>
+        <app-counter [upperLimit]="product.counter.upperLimit" [lowerLimit]="product.counter.lowerLimit"></app-counter>
+
+    </div>
+
+</div>
