@@ -17,10 +17,9 @@ export class ProductFetchserviceService {
     try {
 
       // Remember to use toPromise method otherwise it is troublesome
+      // assign this product list to the store
       this.store.product = await this.http.get(this.url.productList).toPromise();
 
-      // assign this product list to the store
-      //  this.store.product = product;
 
     } catch (error) {
       console.log(error.message);
