@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-3">
-        <app-product></app-product>
+    <div class="col-3" *ngFor="let item of products" style="margin-bottom: 10px;margin-top: 10px;">
+        <app-product [product]="item"></app-product>
     </div>
 </div>
